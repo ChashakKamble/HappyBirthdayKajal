@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .great-vibes-regular {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(2, 250, 250);
+        text-shadow: 0px 0px 10px rgb(228, 42, 166);
+      }
+
+      .parent {
+        height: 100vh;
+      }
+      .child {
+        height: 50%;
+      }
+      .balloon {
+        height: 100px;
+        width: 100px;
+        z-index: 2;
+        position:absolute;
+      }
+      .balloon1 {
+        background-image: url("balloon.png");
+        background-size: cover;
+        animation: float 5s ease-in-out infinite;
+        right:20%;
+
+      }
+      .balloon2 {
+        background-image: url("balloon2.png");
+        background-size: cover;
+        animation: float 6s ease-in-out infinite; /* 6s animation cycle */
+        left: 20%; /* Position of balloon 1 */
+      }
+      .balloon3 {
+        background-image: url("balloon3.png");
+        background-size: cover;
+        height: 150px;
+        animation: float 7s ease-in-out infinite;
+        left:50%;;
+        background-position: top;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0); /* Start at the bottom */
+        }
+        50% {
+          transform: translateY(-200px); /* Move up by 200px */
+        }
+        100% {
+          transform: translateY(-400px); /* End higher up */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex flex-column flex-lg-row parent">
+      <div class="container">
+        <div
+          id="myCarousel"
+          class="carousel slide mb-6"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class=""
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class=""
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img
+                src="pic2.jpg"
+                class="bd-placeholder-img"
+                width="100%"
+                height="100%"
+              />
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1 class="great-vibes-regular">
+                    🎉Happy Birthday Kajal🎉 <br />🎂🎂🎂
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img
+                src="pic1.jpg"
+                class="bd-placeholder-img"
+                width="100%"
+                height="100%"
+              />
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="great-vibes-regular">
+                    Wish You Many Many Happy Returns of the Day
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="pic3.jpg"
+                class="bd-placeholder-img"
+                width="100%"
+                height="100%"
+              />
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1 class="great-vibes-regular">
+                    May you get all the Happiness in the World 😁😁😁
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="container child">
+        <center>
+          <img src="cake.gif" alt="cake image" height="100%" width="100%" />
+        </center>
+      </div>
+    </div>
+    <div class="balloon balloon3"></div>
+    <div class="balloon balloon2"></div>
+    <div class="balloon1 balloon"></div>
+    <div class="balloon3 balloon"></div>
+    <div class="balloon1 balloon"></div>
+    <div class="balloon2 balloon"></div>
+    <div class="balloon balloon3"></div>
+  </body>
+</html>
