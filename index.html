@@ -68,6 +68,44 @@
           transform: translateY(-700px); /* End higher up */
         }
       }
+      @media (max-width: 767px) {
+    .balloon {
+      width: 80px; /* Adjust balloon size for smaller screens */
+      height: 120px;
+      position: fixed; /* Ensure balloons float across the screen */
+      bottom: 0;
+    }
+
+    /* Adjust balloon positions for mobile */
+    .balloon1 {
+      left: 10%;
+    }
+    .balloon2 {
+      left: 40%;
+    }
+    .balloon3 {
+      left: 70%;
+    }
+
+    /* Adjust animation for mobile */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-150px); /* Reduce float distance for mobile */
+      }
+      100% {
+        transform: translateY(-300px);
+      }
+    }
+
+    /* Ensure the container divs take up the entire screen on mobile */
+    .container {
+      height: 100vh; /* Full viewport height to ensure no empty space */
+      overflow: hidden; /* Prevent overflow on small screens */
+    }
+  }
     </style>
   </head>
   <body>
